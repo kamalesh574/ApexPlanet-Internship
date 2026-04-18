@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Objective 1: Understand basic HTML elements and structure -->
+    <title>Internship Task 1 - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Header with semantic tags -->
+    <header class="main-header">
+        <h1>Hello, I'm an Aspiring Web Developer</h1>
+        <p class="subtitle">Welcome to my first internship task showcasing HTML, CSS, and JS basics.</p>
+    </header>
+
+    <main class="content-container">
+        <!-- Section demonstrating Images, Headings, and Paragraphs -->
+        <section class="about-section card">
+            <h2>About This Project</h2>
+            <div class="about-content">
+                <!-- Using a professional workspace image for the demonstration -->
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Desk with laptop" class="profile-img">
+                <div class="text-content">
+                    <p>This webpage is designed to demonstrate foundational web development concepts exactly as required. It fulfills all the steps outlined in <strong>Task 1</strong>.</p>
+                    <p>By structuring content with semantic HTML, styling it meticulously with CSS for a clean light theme, and adding simple interactivity via JavaScript, this page serves as a solid representation of my basic skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section demonstrating Links and Layout -->
+        <section class="resources-section card">
+            <h2>Developer Resources</h2>
+            <p>Here are some of the documentation tools that developers use. Click the links below:</p>
+            <ul class="resource-links">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript Documentation</a></li>
+            </ul>
+        </section>
+
+        <!-- Section demonstrating JavaScript Interactivity -->
+        <section class="interactive-section card">
+            <h2>Interactive Component</h2>
+            <p>Click the button below to see a simple JavaScript interaction in action.</p>
+            <!-- The ID connects this button to the script.js file -->
+            <button id="alert-button" class="btn-primary">Say Hello!</button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Internship Task 1 Submission</p>
+    </footer>
+
+    <!-- Objective 3: Add Basic JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

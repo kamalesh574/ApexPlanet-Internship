@@ -1,0 +1,167 @@
+/* Objective 2: Add colors, fonts, spacing, and layout adjustments */
+
+/* Global styles and CSS variables for a professional Light Theme */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f8f9fa;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --background-color: #eef2f5;
+    --white: #ffffff;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header layout and spacing */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main container layout */
+.content-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+/* Reusable card component for spacing and visual separation */
+.card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--background-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Flexbox layout for the About section */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.profile-img {
+    width: 250px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-content p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+/* List styling */
+.resource-links {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.resource-links li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.resource-links li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+
+/* Link styling */
+.resource-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.resource-links a:hover {
+    color: #003d82;
+    text-decoration: underline;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #003d82;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Footer layout */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--text-dark);
+    color: var(--white);
+    margin-top: auto;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
