@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Flexbox Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-code"></i> Task 2
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-outline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="hero-text">
+            <h1>Task 2</h1>
+            <p>Showcasing HTML, CSS layouts, and vanilla JS DOM manipulation.</p>
+        </div>
+
+        <!-- CSS Grid layout wrapper -->
+        <div class="grid-layout">
+
+            <!-- Section 1: Contact Form (HTML & CSS + JS Validation) -->
+            <section class="card glass-card" id="contact">
+                <div class="card-header">
+                    <h2><i class="fa-regular fa-envelope"></i> Get In Touch</h2>
+                    <p>Send a message (Validation enabled)</p>
+                </div>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                        </div>
+                        <span class="error-msg" id="nameError">Name is required.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                        </div>
+                        <span class="error-msg" id="emailError">Please enter a valid email.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="How can I help you?"></textarea>
+                        <span class="error-msg" id="messageError">Message cannot be empty.</span>
+                    </div>
+
+                    <div id="formSuccess" class="success-msg hidden"><i class="fa-solid fa-check-circle"></i> Message
+                        sent successfully!</div>
+
+                    <button type="submit" class="btn-primary">
+                        Submit <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Section 2: Dynamic To-Do List (JS DOM Manipulation) -->
+            <section class="card glass-card" id="projects">
+                <div class="card-header">
+                    <h2><i class="fa-solid fa-list-check"></i> Task Manager</h2>
+                    <p>Dynamic list using DOM manipulation</p>
+                </div>
+
+                <div class="todo-app">
+                    <div class="task-input">
+                        <input type="text" id="taskInput" placeholder="Add a new task...">
+                        <button id="addTaskBtn" class="btn-secondary"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <ul id="taskList" class="task-list">
+                        <!-- Tasks will be dynamically injected here -->
+                    </ul>
+                    <div class="task-stats">
+                        <span id="taskCount">0 tasks pending</span>
+                        <button id="clearAllBtn" class="btn-text">Clear All</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
