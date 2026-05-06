@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS & Styling</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Task <span>3</span></div>
+            <ul class="nav-links">
+                <li><a href="#quiz-section">Quiz</a></li>
+                <li><a href="#api-section">Joke API</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+
+        <section id="quiz-section" class="glass-panel section-container">
+            <h2 class="section-title">Interactive Quiz</h2>
+            <div class="quiz-container">
+                <div id="quiz-setup" class="quiz-state active">
+                    <p>Test your knowledge on web development!</p>
+                    <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+                </div>
+                
+                <div id="quiz-active" class="quiz-state">
+                    <div class="quiz-header">
+                        <span id="question-tracker">Question 1/5</span>
+                        <span id="score-tracker">Score: 0</span>
+                    </div>
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="answer-buttons" class="btn-grid">
+                        <!-- Buttons injected via JS -->
+                    </div>
+                    <button id="next-btn" class="btn secondary-btn hide">Next Question</button>
+                </div>
+
+                <div id="quiz-results" class="quiz-state">
+                    <h3>Quiz Completed!</h3>
+                    <p id="final-score">Your score is: 0/5</p>
+                    <button id="restart-btn" class="btn primary-btn">Restart Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="api-section" class="glass-panel section-container">
+            <h2 class="section-title">API Integration: Joke Generator</h2>
+            <p>Fetching real-time data from a public joke API.</p>
+            <div class="api-container">
+                <div id="joke-display" class="joke-card">
+                    <p id="joke-setup" class="joke-text">Click the button below to get a developer joke!</p>
+                    <p id="joke-punchline" class="joke-text punchline"></p>
+                </div>
+                <button id="fetch-joke-btn" class="btn primary-btn">Get Another Joke</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Task 3. Designed with advanced CSS & JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
