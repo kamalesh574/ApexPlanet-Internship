@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Premium Tech Marketplace</title>
+    <meta name="description" content="Discover premium tech accessories, headphones, and smartwatches.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for elegant scalable icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="ph-fill ph-infinity"></i>
+            <span>Aura</span>
+        </div>
+        <div class="nav-search">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search premium products...">
+        </div>
+        <div class="nav-actions">
+            <button class="icon-btn"><i class="ph ph-user"></i></button>
+            <button class="icon-btn"><i class="ph ph-shopping-cart-simple"></i></button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3><i class="ph ph-sliders-horizontal"></i> Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <div class="radio-group" id="categoryFilter">
+                        <label class="radio-label">
+                            <input type="radio" name="category" value="All" checked>
+                            <span class="custom-radio"></span>
+                            All Products
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="category" value="Headphones">
+                            <span class="custom-radio"></span>
+                            Headphones
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="category" value="Watches">
+                            <span class="custom-radio"></span>
+                            Smartwatches
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="category" value="Accessories">
+                            <span class="custom-radio"></span>
+                            Accessories
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="range-slider">
+                        <input type="range" id="priceRange" min="0" max="10000" step="100" value="10000">
+                        <div class="price-labels">
+                            <span>₹0</span>
+                            <span id="priceValue">₹10000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="products-section">
+            <div class="section-header">
+                <h1 class="page-title">Discover Tech</h1>
+                <div class="sort-container">
+                    <label for="sortSelect">Sort by:</label>
+                    <div class="custom-select-wrapper">
+                        <select id="sortSelect">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="rating">Top Rated</option>
+                        </select>
+                        <i class="ph ph-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically injected here -->
+            </div>
+            
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <i class="ph ph-magnifying-glass-minus"></i>
+                <h2>No products found</h2>
+                <p>Try adjusting your filters or search term.</p>
+                <button class="btn-primary" id="resetFiltersBtn">Reset Filters</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
